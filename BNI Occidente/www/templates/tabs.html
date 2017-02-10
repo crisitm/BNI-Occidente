@@ -5,19 +5,30 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
+
+  <!-- Welcome Tab -->
+  <ion-tab hidden="true" title="BNI Occidente" href="#/tab/dash">
     <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
+  <!-- One2One Tab -->
+  <ion-tab title="1 a 1" icon-off="ion-android-people" icon-on="ion-android-people" href="#/tab/one2one" badge="badges.one2One" badge-style="badge-assertive">
+    <ion-nav-view name="tab-one2one"></ion-nav-view>
   </ion-tab>
 
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Reference Tab -->
+  <ion-tab title="Referencia" icon-off="ion-link" icon-on="ion-link" href="#/tab/reference" badge="badges.reference" badge-style="badge-assertive">
+    <ion-nav-view name="tab-reference"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Thanks Tab -->
+  <ion-tab title="Gracias" icon-off="ion-android-done-all" icon-on="ion-android-done-all" href="#/tab/thanks" badge="badges.thanks" badge-style="badge-assertive">
+    <ion-nav-view name="tab-thanks"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Profile Tab -->
+  <ion-tab title="Perfil" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/profile">
+    <ion-nav-view name="tab-profile"></ion-nav-view>
   </ion-tab>
 
 
