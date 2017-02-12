@@ -26,7 +26,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.navBar.alignTitle('center');
   $ionicConfigProvider.tabs.position('bottom');
-  $ionicConfigProvider.backButton.previousTitleText(false);
+  $ionicConfigProvider.backButton.previousTitleText('');
 
   $stateProvider
 
