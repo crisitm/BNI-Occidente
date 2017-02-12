@@ -1,11 +1,61 @@
-<ion-view view-title="Referencia de negocio">
-  <ion-content class="has-header padding">
+<ion-view view-title="Referencia de negocio" view-name="tab-reference">
+  <ion-content class="has-header" overflow-scroll="true">
     <div class="row row-center text-center">
       <div class="col col-center">
-        <h1>Te tengo una referencia</h1>
+        <h2>Tengo una referencia</h2>
         <hr>
-        <h2>Pendiente</h2>
       </div>
+    </div>
+    <div class="list reference">
+      <label class="item item-input item-stacked-label">
+        <div class="input-label">
+          De
+        </div>
+        <input type="text" placeholder="Su contacto" class="from"></input>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Para
+        </div>
+        <select>
+          <option selected>Elías Gómez</option>
+          <option>Eric Chacón</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Contacto
+        </div>
+        <select>
+          <option selected>Le di su tarjeta</option>
+          <option>Le dije que usted lo llamaría</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Tipo de referencia
+        </div>
+        <select>
+          <option selected>Interna</option>
+          <option>Externa</option>
+        </select>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <textarea placeholder="Dirección"></textarea>
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-ios-telephone"></i> <input type="number" ng-model="user.phone" placeholder="Ingresa aquí el número telefónico">
+      </label>
+      <label class="item item-input item-floating-label no-radius">
+        <i class="icon ion-android-mail"></i> <input type="text" ng-model="user.email" placeholder="Ingresa aquí el correo electrónico">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <textarea placeholder="Comentarios"></textarea>
+      </label>
+    </div>
+    <div class="padding-left padding-right">
+      <button class="button button-block button-positive">Enviar datos</button>
     </div>
   </ion-content>
 </ion-view>

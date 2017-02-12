@@ -12,3 +12,24 @@
   height: 100%;
   margin-top: 40px;
 }
+.config-space i{
+  float: left;
+  font-size: 25px;
+  padding-right: 10px;
+}
+.config-space input{
+  float: left;
+  width: 89% !important;
+}
+.thanks input {
+  float: left;
+  width: 60% !important;
+  text-align: right;
+}
+.thanks .input-label, .reference .input-label{
+  float: left;
+}
+.from{
+  width: 64% !important;
+  text-align: right;
+}
