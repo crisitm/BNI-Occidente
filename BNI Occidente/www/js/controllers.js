@@ -1,28 +1,40 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+})
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+.controller('ReferenceCtrl', function($scope) {
+
+})
+
+.controller('WorkDoneCtrl', function($scope) {
+
+})
+
+.controller('ProfileCtrl', function($scope, AppService) {
+  $scope.profile = {
+    occuppation : AppService.getDevice().occuppation,
+    firstName : AppService.getDevice().first_name,
+    lastName : AppService.getDevice().last_name,
+    phone : parseInt( AppService.getDevice().phone ),
+    email : AppService.getDevice().email,
+    getPush : AppService.getDevice().get_push
   };
-})
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+  $scope.saveChanges = function () {
+    AppService.loading();
+    var promise = AppService.saveSettings( $scope.profile );
+    promise.then(
+      function( res ) {
+        if( res.data ){
+          AppService.setDevice( res.data );
+        }
+        AppService.toastIt( "Los cambios han sido guardados." );
+        AppService.doneLoading();
+      },
+      function(e) {
+        AppService.var_dump( e );
+        AppService.doneLoading();
+      });
   };
 });
