@@ -1,5 +1,5 @@
-<ion-view view-title="Referencia de negocio" view-name="tab-reference">
-  <ion-content class="has-header" overflow-scroll="true">
+<ion-view view-title="BNI Occidente">
+  <ion-content class="has-header">
     <div class="row row-center text-center">
       <div class="col col-center">
         <h2>Tengo una referencia</h2>
@@ -11,7 +11,7 @@
         <div class="input-label">
           De
         </div>
-        <input type="text" placeholder="Su contacto" class="from"></input>
+        <input type="text" placeholder="Nombre de su contacto" class="from"></input>
       </label>
       <label class="item item-input item-select">
         <div class="input-label">
@@ -22,7 +22,6 @@
           <option>Eric Chacón</option>
         </select>
       </label>
-
       <label class="item item-input item-select">
         <div class="input-label">
           Contacto
@@ -41,17 +40,27 @@
           <option>Externa</option>
         </select>
       </label>
-      <label class="item item-input item-stacked-label">
-        <textarea placeholder="Dirección"></textarea>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-location"></i> <input type="text"  placeholder="Ingresa la dirección del contacto">
       </label>
       <label class="item item-input item-floating-label">
-        <i class="icon ion-ios-telephone"></i> <input type="number" ng-model="user.phone" placeholder="Ingresa aquí el número telefónico">
+        <i class="icon ion-ios-telephone"></i> <input type="number" placeholder="Ingresa el número telefónico del contacto">
       </label>
       <label class="item item-input item-floating-label no-radius">
-        <i class="icon ion-android-mail"></i> <input type="text" ng-model="user.email" placeholder="Ingresa aquí el correo electrónico">
+        <i class="icon ion-android-mail"></i> <input type="text"  placeholder="Ingresa el correo del contacto">
       </label>
+      <label class="item item-input item-floating-label no-radius">
+        <i class="icon ion-thermometer"></i> <p class="padding-top">¿Cuán caliente está la referencia?</p>
+      </label>
+      <div class="list">
+        <div class="item range range-positive">
+          <i class="icon ion-ios-flame-outline"></i>
+          <input type="range" name="volume" min="0" max="5" value="5">
+          <i class="icon ion-ios-flame"></i>
+        </div>
+      </div>
       <label class="item item-input item-stacked-label">
-        <textarea placeholder="Comentarios"></textarea>
+        <textarea placeholder="Comentarios adicionales"></textarea>
       </label>
     </div>
     <div class="padding-left padding-right">

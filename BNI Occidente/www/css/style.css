@@ -33,3 +33,12 @@
   width: 64% !important;
   text-align: right;
 }
+.item-floating-label i{
+  float: left;
+  padding-right: 15px;
+  font-size: 25px;
+}
+.item-floating-label input{
+  width: 88%;
+  float: left;
+}
