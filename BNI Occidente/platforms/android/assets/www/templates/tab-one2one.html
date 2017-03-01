@@ -1,0 +1,30 @@
+<ion-view view-title="Uno a Uno">
+  <ion-content class="has-header padding">
+    <div class="row row-center text-center">
+      <div class="col col-center">
+        <h2>Reunión 1 a 1</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="list reference">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Me reuní con
+        </div>
+        <select ng-model="withMember.id" ng-options='member.id as ( member.first_name + " " + member.last_name ) for member in members'></select>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <div class="input-label">
+          Fecha
+        </div>
+        <input type="date" class="from" ng-model="meetup.date"></input>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <textarea placeholder="Temas tratados" ng-model="meetup.comments"></textarea>
+      </label>
+    </div>
+    <div class="padding-left padding-right">
+      <button class="button button-block button-positive" ng-click="sendMeetUp()">Enviar datos</button>
+    </div>
+  </ion-content>
+</ion-view>

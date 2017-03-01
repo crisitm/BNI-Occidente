@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.yesduet.bni"
+        }
+    },
+    "dependent_plugins": {}
+}

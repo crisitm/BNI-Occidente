@@ -1,0 +1,44 @@
+.bg-cover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+  position: relative;
+}
+.welcome-bg{
+  background-image: url("../img/bg3.png");
+  height: 100%;
+  margin-top: 40px;
+}
+.config-space i{
+  float: left;
+  font-size: 25px;
+  padding-right: 10px;
+}
+.config-space input{
+  float: left;
+  width: 89% !important;
+}
+.thanks input {
+  float: left;
+  width: 60% !important;
+  text-align: right;
+}
+.thanks .input-label, .reference .input-label{
+  float: left;
+}
+.from{
+  width: 64% !important;
+  text-align: right;
+}
+.item-floating-label i{
+  float: left;
+  padding-right: 15px;
+  font-size: 25px;
+}
+.item-floating-label input{
+  width: 88%;
+  float: left;
+}
