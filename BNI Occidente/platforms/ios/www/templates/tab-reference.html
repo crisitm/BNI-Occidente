@@ -1,0 +1,59 @@
+<ion-view view-title="BNI Occidente">
+  <ion-content class="has-header">
+    <div class="row row-center text-center">
+      <div class="col col-center">
+        <h2>Tengo una referencia</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="list reference">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Para
+        </div>
+        <select ng-model="toMember.id" ng-options='member.id as ( member.first_name + " " + member.last_name ) for member in members'></select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Tipo de contacto
+        </div>
+        <select ng-model="reference.contactType" ng-options='contact.id as contact.type for contact in contactTypes'>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Tipo de referencia
+        </div>
+        <select ng-model="reference.type" ng-options='reference.id as reference.type for reference in referenceTypes'></select>
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-person"></i> <input type="text" ng-model="reference.contactName" placeholder="Ingresa el nombre del contacto">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-location"></i> <input type="text" ng-model="reference.address" placeholder="Ingresa la dirección del contacto">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-ios-telephone"></i> <input type="number" ng-model="reference.contactPhone" placeholder="Ingresa el número telefónico del contacto">
+      </label>
+      <label class="item item-input item-floating-label no-radius">
+        <i class="icon ion-android-mail"></i> <input type="text" ng-model="reference.contactEmail" placeholder="Ingresa el correo del contacto">
+      </label>
+      <label class="item item-input item-floating-label no-radius">
+        <i class="icon ion-thermometer"></i> <p class="padding-top">¿Cuán caliente está la referencia?</p>
+      </label>
+      <div class="list">
+        <div class="item range range-positive">
+          <i class="icon ion-ios-flame-outline"></i>
+          <input type="range" name="volume" min="0" max="5" value="5" ng-model="reference.hotness">
+          <i class="icon ion-ios-flame"></i>
+        </div>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <textarea placeholder="Comentarios adicionales" ng-model="reference.comments"></textarea>
+      </label>
+    </div>
+    <div class="padding-left padding-right">
+      <button class="button button-block button-positive" ng-click="sendReference()">Enviar datos</button>
+    </div>
+  </ion-content>
+</ion-view>

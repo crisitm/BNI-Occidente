@@ -1,0 +1,32 @@
+<ion-view view-title="BNI Occidente">
+  <ion-content class="has-header">
+    <h2 class="padding text-center">Perfil de usuario</h2>
+    <div class="list config-space">
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-home"></i> <input type="text" ng-model="profile.company" placeholder="Nombre de tu empresa">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-ios-list"></i> <input type="text" ng-model="profile.services" placeholder="Servicios que ofreces">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-network"></i> <input type="text" ng-model="profile.occuppation" placeholder="Ingresa aquí tu profesión">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-person"></i> <input type="text" ng-model="profile.firstName" placeholder="Ingresa aquí tu nombre">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-person"></i> <input type="text" ng-model="profile.lastName" placeholder="Ingresa aquí tus apellidos">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-ios-telephone"></i> <input type="number" ng-model="profile.phone" placeholder="Ingresa aquí tu número telefónico">
+      </label>
+      <label class="item item-input item-floating-label no-radius">
+        <i class="icon ion-android-mail"></i> <input type="email" ng-model="profile.email" placeholder="Ingresa aquí tu correo electrónico">
+      </label>
+      <ion-toggle ng-model="profile.getPush" toggle-class="toggle-balanced">Recibir notificaciones</ion-toggle>
+    </div>
+    <div class="padding-left padding-right">
+      <button class="button button-block button-positive" ng-click="saveChanges()">Guardar Cambios</button>
+    </div>
+  </ion-content>
+</ion-view>
