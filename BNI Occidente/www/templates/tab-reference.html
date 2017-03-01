@@ -7,47 +7,36 @@
       </div>
     </div>
     <div class="list reference">
-      <label class="item item-input item-stacked-label">
-        <div class="input-label">
-          De
-        </div>
-        <input type="text" placeholder="Nombre de su contacto" class="from"></input>
-      </label>
       <label class="item item-input item-select">
         <div class="input-label">
           Para
         </div>
-        <select>
-          <option selected>Elías Gómez</option>
-          <option>Eric Chacón</option>
-        </select>
+        <select ng-model="toMember.id" ng-options='member.id as ( member.first_name + " " + member.last_name ) for member in members'></select>
       </label>
       <label class="item item-input item-select">
         <div class="input-label">
-          Contacto
+          Tipo de contacto
         </div>
-        <select>
-          <option selected>Le di su tarjeta</option>
-          <option>Le dije que usted lo llamaría</option>
+        <select ng-model="reference.contactType" ng-options='contact.id as contact.type for contact in contactTypes'>
         </select>
       </label>
       <label class="item item-input item-select">
         <div class="input-label">
           Tipo de referencia
         </div>
-        <select>
-          <option selected>Interna</option>
-          <option>Externa</option>
-        </select>
+        <select ng-model="reference.type" ng-options='reference.id as reference.type for reference in referenceTypes'></select>
       </label>
       <label class="item item-input item-floating-label">
-        <i class="icon ion-location"></i> <input type="text"  placeholder="Ingresa la dirección del contacto">
+        <i class="icon ion-person"></i> <input type="text" ng-model="reference.contactName" placeholder="Ingresa el nombre del contacto">
       </label>
       <label class="item item-input item-floating-label">
-        <i class="icon ion-ios-telephone"></i> <input type="number" placeholder="Ingresa el número telefónico del contacto">
+        <i class="icon ion-location"></i> <input type="text" ng-model="reference.address" placeholder="Ingresa la dirección del contacto">
+      </label>
+      <label class="item item-input item-floating-label">
+        <i class="icon ion-ios-telephone"></i> <input type="number" ng-model="reference.contactPhone" placeholder="Ingresa el número telefónico del contacto">
       </label>
       <label class="item item-input item-floating-label no-radius">
-        <i class="icon ion-android-mail"></i> <input type="text"  placeholder="Ingresa el correo del contacto">
+        <i class="icon ion-android-mail"></i> <input type="text" ng-model="reference.contactEmail" placeholder="Ingresa el correo del contacto">
       </label>
       <label class="item item-input item-floating-label no-radius">
         <i class="icon ion-thermometer"></i> <p class="padding-top">¿Cuán caliente está la referencia?</p>
@@ -55,16 +44,16 @@
       <div class="list">
         <div class="item range range-positive">
           <i class="icon ion-ios-flame-outline"></i>
-          <input type="range" name="volume" min="0" max="5" value="5">
+          <input type="range" name="volume" min="0" max="5" value="5" ng-model="reference.hotness">
           <i class="icon ion-ios-flame"></i>
         </div>
       </div>
       <label class="item item-input item-stacked-label">
-        <textarea placeholder="Comentarios adicionales"></textarea>
+        <textarea placeholder="Comentarios adicionales" ng-model="reference.comments"></textarea>
       </label>
     </div>
     <div class="padding-left padding-right">
-      <button class="button button-block button-positive">Enviar datos</button>
+      <button class="button button-block button-positive" ng-click="sendReference()">Enviar datos</button>
     </div>
   </ion-content>
 </ion-view>

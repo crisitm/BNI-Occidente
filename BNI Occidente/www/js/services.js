@@ -14,7 +14,17 @@ angular.module('starter.services', [])
       $state.transitionTo( pScreen );
     };
     global.initDevice();
+    global.initData();
     //global.initPush();
+  };
+  global.initData = function () {
+    var startData = global.start();
+    startData.then(
+      function(res) {
+        res.data.members.unshift( { id : -1, first_name : 'Miembro del equipo' } );
+        global.setMembers( res.data.members );
+        console.log( global.getMembers() );
+      });
   };
   global.initDevice = function () {
     global.setDevice( $cordovaDevice.getDevice() );
@@ -26,7 +36,17 @@ angular.module('starter.services', [])
       }, null);
   };
   global.start = function () {
-    return global.fetch( "start", {} );
+    return global.fetch( "start", { uuid : global.getDevice().uuid } );
+  };
+  global.saveWork = function ( pWork ) {
+    console.log( pWork );
+    return global.fetch( "save-work", pWork );
+  };
+  global.saveReference = function ( pReference ) {
+    return global.fetch( "save-reference", pReference );
+  };
+  global.saveMeetUp = function ( pMeetUp ) {
+    return global.fetch( "save-meetup", pMeetUp );
   };
   global.saveSettings = function ( pSettings ) {
     if( pSettings.firstName == 'null' ){
@@ -41,7 +61,13 @@ angular.module('starter.services', [])
     if( pSettings.email == 'null' ){
       pSettings.email = '';
     }
-    return global.fetch( "save-settings", { uuid : global.getDevice().uuid, firstName : pSettings.firstName, lastName : pSettings.lastName, phone : pSettings.phone, email : pSettings.email, push : ( pSettings.getPush? 1 : 0 ), occuppation: pSettings.occuppation } );
+    if( pSettings.company == 'null' ){
+      pSettings.company = String( '' );
+    }
+    if( pSettings.services == 'null' ){
+      pSettings.services = '';
+    }
+    return global.fetch( "save-settings", pSettings );
   };
 
 
@@ -98,6 +124,12 @@ angular.module('starter.services', [])
       }, 100);
       return deferred.promise;
     });
+  };
+  global.getMembers = function () {
+    return global.members;
+  };
+  global.setMembers = function ( pMembers) {
+    global.members = pMembers;
   };
   global.setPushToken = function ( ptoken ) {
     global.pushToken = ptoken;

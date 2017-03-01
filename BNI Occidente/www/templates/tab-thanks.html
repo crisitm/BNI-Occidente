@@ -12,39 +12,30 @@
         <div class="input-label">
           Gracias a
         </div>
-        <select>
-          <option selected>Elías Gómez</option>
-          <option>Eric Chacón</option>
-        </select>
+        <select ng-model="toMember.id" ng-options='member.id as ( member.first_name + " " + member.last_name ) for member in members'></select>
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Monto</span>
-        <input type="number" placeholder="$500.00">
+        <input type="number" placeholder="$500.00" ng-model="work.amount">
       </label>
       <label class="item item-input item-select">
         <div class="input-label">
           Tipo de negocio
         </div>
-        <select>
-          <option selected>Nuevo negocio</option>
-          <option>Negocio repetido</option>
-        </select>
+        <select ng-model="work.type" ng-options='bussiness.id as bussiness.type for bussiness in bussinessTypes'></select>
       </label>
       <label class="item item-input item-select">
         <div class="input-label">
           Tipo de referencia
         </div>
-        <select>
-          <option selected>Interna</option>
-          <option>Externa</option>
-        </select>
+        <select ng-model="work.referenceType" ng-options='reference.id as reference.type for reference in referenceTypes'></select>
       </label>
       <label class="item item-input item-stacked-label">
-        <textarea placeholder="Comentarios"></textarea>
+        <textarea placeholder="Comentarios adicionales" ng-model="work.comments"></textarea>
       </label>
     </div>
     <div class="padding-left padding-right">
-      <button class="button button-block button-positive">Enviar datos</button>
+      <button class="button button-block button-positive" ng-click="sendWork()">Enviar datos</button>
     </div>
   </ion-content>
 </ion-view>
