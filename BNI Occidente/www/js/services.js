@@ -23,7 +23,6 @@ angular.module('starter.services', [])
       function(res) {
         res.data.members.unshift( { id : -1, first_name : 'Miembro del equipo' } );
         global.setMembers( res.data.members );
-        console.log( global.getMembers() );
       });
   };
   global.initDevice = function () {

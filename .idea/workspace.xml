@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94bc1e8d-8d05-4cc5-9762-4d9e5e372311" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/js/controllers.js" afterPath="$PROJECT_DIR$/BNI Occidente/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/js/services.js" afterPath="$PROJECT_DIR$/BNI Occidente/www/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-one2one.html" afterPath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-one2one.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-profile.html" afterPath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-reference.html" afterPath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-reference.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-thanks.html" afterPath="$PROJECT_DIR$/BNI Occidente/www/templates/tab-thanks.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,8 +103,8 @@
       <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BNI Occidente/www/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="23" column="83" lean-forward="false" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
+            <state relative-caret-position="337">
+              <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -379,12 +373,12 @@
       <workItem from="1486923367928" duration="435000" />
       <workItem from="1486926211367" duration="5845000" />
       <workItem from="1488299615511" duration="8288000" />
-      <workItem from="1488317000727" duration="16604000" />
+      <workItem from="1488317000727" duration="17162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35623000" />
+    <option name="totallyTimeSpent" value="36181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="912" y="23" width="1648" height="1090" extended-state="0" />
@@ -806,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BNI Occidente/www/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="83" lean-forward="false" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
+        <state relative-caret-position="337">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding />
         </state>
       </provider>
